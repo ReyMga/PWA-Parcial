@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>Captura de Foto</title>
+</head>
+<body>
+  <header>
+    <h1>Captura de Foto</h1>
+  </header>
+
+  <main>
+    <form id="photo-form" aria-labelledby="photo-preview">
+      <div class="photo-preview" id="photo-preview">
+        <img id="photo" src="default.jpg" alt="Vista previa de la foto">
+      </div>
+
+      <label for="photo-title" class="input-label">Título para la foto</label>
+      <input type="text" id="photo-title" name="title" placeholder="Escribe el título" required>
+
+      <div class="buttons">
+        <button type="button" id="cancel-btn" aria-label="Cancelar">Cancelar</button>
+        <button type="submit" id="publish-btn" aria-label="Publicar">Publicar</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="camara.js" defer></script>
+</body>
+</html>
