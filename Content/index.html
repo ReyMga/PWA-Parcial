@@ -1,53 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="/Styles/styles.css">
-  <title>MInstagram</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="/Styles/styles.css">
+    <title>Instagram</title>
 </head>
 <body>
-  <header>
-    <h1>Mi Instagram</h1>
-  </header>
+    <header>
+        <h1>Instagram Express</h1>
+    </header>
 
-  <main aria-labelledby="photo-reel">
-    <section id="photo-reel" class="carousel">
-      <div class="carousel-inner">
-        <article class="card active">
-          <img src="/img/dog1.jpg" alt="imagen-uno" class="card-img lazy">
-          <div class="card-content">
-            <h2 class="card-title">Título 1</h2>
-            <p class="card-date">Fecha y hora</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="/img/dog2.jpg" alt="imagen-dos" class="card-img lazy">
-          <div class="card-content">
-            <h2 class="card-title">Título 2</h2>
-            <p class="card-date">Fecha y hora</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="/img/dog3.jpg" alt="imagen-tres" class="card-img lazy">
-          <div class="card-content">
-            <h2 class="card-title">Título 3</h2>
-            <p class="card-date">Fecha y hora</p>
-          </div>
-        </article>
-      </div>
-      <!-- <button class="carousel-control prev" aria-label="Anterior">&lt;</button>
-      <button class="carousel-control next" aria-label="Siguiente">&gt;</button> -->
-      <button id="new-photo-btn" aria-label="Nueva Foto">➕ Nueva Foto</button>
-    </section>
-  </main>
-  
+    <main aria-labelledby="photo-reel">
+        <section id="photo-reel" class="carousel">
+            <div class="carousel-inner"> 
+                <!-- Las tarjetas se insertarán aquí mediante JavaScript -->
+            </div>
+            <button id="captureBtn" onclick="window.location.href='camara.html'">➕ Nueva Foto</button>
+        </section>
+    </main>
 
-  <footer>
-    <img src="/img/instagram.png" alt="logo" class="card-logo">
-  </footer>
+    <footer>
+        <img src="/img/instagram.png" alt="logo" class="card-logo">
+    </footer>
 
-  <script src="index.js" defer></script>
+    <script src="/js/script.js" defer></script>
 </body>
 </html>

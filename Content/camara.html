@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="styles.css">
-  <title>Captura de Foto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Photo</title>
+    <link rel="stylesheet" href="/Styles/camara.css">
 </head>
 <body>
-  <header>
-    <h1>Captura de Foto</h1>
-  </header>
+    <header>
+        <h1>Instagram Express</h1>
+    </header>
+    <main class="container">
+        <!-- Previsualización de la imagen -->
+        <img id="imagen-previa" src="placeholder.jpg" alt="Vista previa de la imagen">
 
-  <main>
-    <form id="photo-form" aria-labelledby="photo-preview">
-      <div class="photo-preview" id="photo-preview">
-        <img id="photo" src="default.jpg" alt="Vista previa de la foto">
-      </div>
+        <!-- Campo para subir la imagen -->
+        <input type="file" id="archivo-subido" accept="image/*" capture="camera">
 
-      <label for="photo-title" class="input-label">Título para la foto</label>
-      <input type="text" id="photo-title" name="title" placeholder="Escribe el título" required>
+        <!-- Campo para el título de la imagen -->
+        <input type="text" id="titulo-imagen" placeholder="Título para la imagen">
 
-      <div class="buttons">
-        <button type="button" id="cancel-btn" aria-label="Cancelar">Cancelar</button>
-        <button type="submit" id="publish-btn" aria-label="Publicar">Publicar</button>
-      </div>
-    </form>
-  </main>
+        <!-- Botones de cancelar y publicar -->
+        <button onclick="window.location.href='index.html'">Cancelar</button>
+        <button id="boton-publicar">Publicar</button>
+    </main>
 
-  <script src="camara.js" defer></script>
+    <!-- Enlace al archivo JS -->
+    <script src="/js/camara.js"></script>
 </body>
 </html>
