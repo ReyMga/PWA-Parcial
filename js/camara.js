@@ -1,5 +1,5 @@
 const archivoEntrada = document.getElementById('archivo-subido');
-const previsualizacion = document.getElementById('imagen-previa');
+const previsualizacion = document.getElementById('subirfoto');
 const botonPublicar = document.getElementById('boton-publicar');
 const tituloImagen = document.getElementById('titulo-imagen');
 
@@ -32,7 +32,7 @@ const redimensionarImagen = (imgBase64, maxWidth = 600, maxHeight = 600) => {
             const ctx = canvas.getContext('2d');
             ctx.drawImage(img, 0, 0, width, height);
 
-            // Convertir de nuevo a base64 con menor calidad
+            // Se convierte de nuevo a base64 con menor calidad
             resolve(canvas.toDataURL('image/jpeg', 0.6)); // Calidad 60%
         };
     });

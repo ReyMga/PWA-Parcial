@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Capture Photo</title>
-    <link rel="stylesheet" href="./Styles/camara.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./Styles/camara.css" />
+  </head>
+  <body>
     <header>
-        <h1>Instagram Express</h1>
+      <h1>Instagram Express</h1>
     </header>
     <main class="container">
-        <!-- Previsualización de la imagen -->
-        <img id="imagen-previa" src="placeholder.jpg" alt="Vista previa de la imagen">
+      <img
+        id="subirfoto"
+        class="imagen-previa"
+        src="./img/subirfoto.jpg"
+        alt="Vista previa de la imagen"
+      />
 
-        <!-- Campo para subir la imagen -->
-        <input type="file" id="archivo-subido" accept="image/*" capture="camera">
+      <input
+        type="file"
+        id="archivo-subido"
+        accept="image/*"
+        capture="camera"
+      />
 
-        <!-- Campo para el título de la imagen -->
-        <input type="text" id="titulo-imagen" placeholder="Título para la imagen">
+      <input
+        type="text"
+        id="titulo-imagen"
+        placeholder="Título para la imagen"
+        maxlength="20"
+      />
 
-        <!-- Botones de cancelar y publicar -->
+      <!-- Botones de cancelar y publicar -->
+      <div>
         <button onclick="window.location.href='index.html'">Cancelar</button>
         <button id="boton-publicar">Publicar</button>
+      </div>
     </main>
 
     <!-- Enlace al archivo JS -->
     <script src="./js/camara.js"></script>
-</body>
+  </body>
 </html>

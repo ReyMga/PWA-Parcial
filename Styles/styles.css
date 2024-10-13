@@ -1,126 +1,98 @@
+/* Reseteo de márgenes y padding */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Arial", sans-serif;
-  background: rgb(255, 239, 246);
-  background: radial-gradient(
-    circle,
-    rgba(255, 239, 246, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  font-size: var(--font-size);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f0f0;
+  color: #333;
 }
 
 header {
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
-  );
-  width: 100%;
-  padding: 20px;
+  background-color: #e1306c; /* Color de fondo de Instagram */
+  color: white;
   text-align: center;
+  padding: 1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   padding: 20px;
 }
 
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
 .card {
-  border: 1px solid #ccc;
+  background-color: white;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 16px;
-  margin: 16px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Ancho fijo de las tarjetas */
+  overflow: hidden;
   text-align: center;
-  width: 100%;
-  max-width: 400px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  padding: 10px;
 }
 
 .card-img {
-  width: 100%;
-  height: auto;
-}
-
-.card-logo {
-  width: 40px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  width: 100%; 
+  height: 300px; 
+  object-fit: cover;
 }
 
 .card-content {
-  margin-top: 10px;
+  padding: 10px;
+}
+
+.card-date {
+  color: #888;
+  font-size: 0.9rem;
 }
 
 button {
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
-  );
-  width: 100%;
+  background-color: #e1306c; 
   color: white;
   border: none;
   padding: 10px;
-  border-radius: 8px;
-  margin: 10px;
+  border-radius: 5px;
   cursor: pointer;
+  margin: 10px 0; 
 }
 
-button#cancel-btn {
-  background-color: var(--cancel-color);
+button:hover {
+  background-color: #c13584; 
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
+footer {
+  background-color: #e1306c;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
   width: 100%;
-  max-width: 400px;
 }
 
-input {
-  margin: 10px 0;
-  padding: 10px;
-  width: 100%;
-  max-width: 400px;
-}
-
-input::placeholder {
-  color: #888;
-}
-
-.carousel-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
+.card-logo {
+  width: 50px; /* Ajusta el tamaño del logo */
 }
