@@ -1,46 +1,76 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-header {
-    background: rgb(131, 58, 180);
-    background: linear-gradient(
-      90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(253, 29, 29, 1) 50%,
-      rgba(252, 176, 69, 1) 100%
-    );
-    width: 100%;
-    padding: 20px;
-    text-align: center;
   }
   
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-button {
-    padding: 10px 20px;
-    background-color: #6200ea;
-    color: white;
-    border: none;
-    margin: 10px;
-    cursor: pointer;
-}
-img {
-    max-width: 100%;
-}
-    
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  header {
+      background: rgb(131, 58, 180);
+      background: linear-gradient(
+        90deg,
+        rgba(131, 58, 180, 1) 0%,
+        rgba(253, 29, 29, 1) 50%,
+        rgba(252, 176, 69, 1) 100%
+      );
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      color: white;
+  }
+  
+  .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+  }
+  
+  button {
+      padding: 12px 24px; /* Aumentar tamaño */
+      background-color: #6200ea;
+      color: white;
+      border: none;
+      border-radius: 5px; /* Bordes redondeados */
+      margin: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s; /* Transición suave */
+  }
+  
+  button:hover {
+      background-color: #3700b3; /* Color más oscuro al pasar el ratón */
+  }
+  
+  input[type="file"],
+  input[type="text"] {
+      width: 50%; /* Ocupa todo el ancho */
+      padding: 10px;
+      margin: 10px 0; /* Espacio superior e inferior */
+      border: 1px solid #ccc;
+      border-radius: 4px; /* Bordes redondeados */
+  }
+  
+  input[type="text"]::placeholder {
+      color: #888; /* Color del placeholder */
+  }
+  
+  img {
+      max-width: 100%;
+      border-radius: 8px; /* Bordes redondeados para la imagen */
+  }
+  
+  .imagen-previa{
+    max-width: 50%;
+    height: auto;
+  }
