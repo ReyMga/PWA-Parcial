@@ -6,12 +6,26 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(142, 32, 71, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+main {
+  background: rgb(71, 20, 99);
+  background: linear-gradient(
+    90deg,
+    rgba(71, 20, 99, 1) 0%,
+    rgba(81, 72, 117, 1) 50%,
+    rgba(19, 12, 3, 1) 100%
+  );
+}
 header {
   background: rgb(131, 58, 180);
   background: linear-gradient(
@@ -74,7 +88,15 @@ img {
   max-width: 30%;
   height: auto;
 }
+.clickable {
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.3s;
+}
 
+.clickable:hover {
+  color: #c13584;
+}
 
 @media (max-width: 768px) {
   input[type="file"],
