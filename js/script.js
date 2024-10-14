@@ -8,41 +8,44 @@ const asegurarLength = (title) => {
 };
 
 async function cargarImagenes() {
+  const loader = document.querySelector('.loader'); // Selecciona el loader
+  loader.style.display = 'block'; // Muestra el loader
+
   try {
-    const response = await fetch(
-      "https://67070a84a0e04071d228f87b.mockapi.io/todo"
-    );
+    const response = await fetch("https://67070a84a0e04071d228f87b.mockapi.io/todo");
     const imagenes = await response.json();
 
     console.log(imagenes);
 
     const reel = document.getElementById("photo-reel");
     const carouselInner = reel.querySelector(".carousel-inner");
-    carouselInner.innerHTML = "";
+    carouselInner.innerHTML = ""; // Limpiar contenido anterior
+
+    // Oculta el loader después de cargar las imágenes
+    loader.style.display = 'none';
 
     imagenes.forEach((imagen) => {
       const card = document.createElement("article");
       card.classList.add("card");
 
       card.innerHTML = `
-              <h2 class="card-title">${asegurarLength(imagen.titulo)}</h2>
-              <img src="${imagen.url}" alt="${
-        imagen.titulo
-      }" class="card-img lazy">
-              <div class="card-content">
-                  <p class="card-date">Fecha: ${new Date(
-                    imagen.fecha
-                  ).toLocaleString()}</p>
-              </div>
-              <button onClick="eliminarImagen(${imagen.id})">Eliminar</button>
-              <button onClick="editarImagen(${imagen.id})">Editar</button>
-          `;
+        <h2 class="card-title">${asegurarLength(imagen.titulo)}</h2>
+        <img src="${imagen.url}" alt="${imagen.titulo}" class="card-img lazy">
+        <div class="card-content">
+          <p class="card-date">Fecha: ${new Date(imagen.fecha).toLocaleString()}</p>
+        </div>
+        <button onClick="eliminarImagen(${imagen.id})">Eliminar</button>
+        <button onClick="editarImagen(${imagen.id})">Editar</button>
+      `;
       carouselInner.appendChild(card);
     });
   } catch (error) {
     console.error("Error al cargar las imágenes:", error);
+    // También oculta el loader si ocurre un error
+    loader.style.display = 'none';
   }
 }
+
 
 async function eliminarImagen(id) {
   Swal.fire({
