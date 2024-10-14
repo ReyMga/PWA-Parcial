@@ -38,14 +38,14 @@ header {
 }
 
 button {
-  padding: 12px 24px; 
+  padding: 12px 24px;
   background-color: #6200ea;
   color: white;
   border: none;
-  border-radius: 5px; 
+  border-radius: 5px;
   margin: 10px;
   cursor: pointer;
-  transition: background-color 0.3s; 
+  transition: background-color 0.3s;
 }
 
 button:hover {
@@ -67,10 +67,27 @@ input[type="text"]::placeholder {
 
 img {
   max-width: 100%;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 
 .imagen-previa {
   max-width: 30%;
   height: auto;
+}
+
+
+@media (max-width: 768px) {
+  input[type="file"],
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .imagen-previa {
+    max-width: 70%;
+    height: auto;
+  }
 }
