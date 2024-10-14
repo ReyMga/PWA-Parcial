@@ -1,34 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="./Styles/styles.css"> <!-- Ruta correcta -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="./Styles/styles.css" />
+    <link rel="icon" href="./img/instagram.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRmG8Bzl1M5cRaIrJXzQzRs9CdM9/pFmz5FsZh1lB"
+      crossorigin="anonymous"
+    />
+
     <title>Instagram</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Instagram Express</h1>
+      <h1>Instagram Pets and Pals</h1>
     </header>
 
     <main aria-labelledby="photo-reel">
-        <section id="photo-reel" class="carousel">
-            <div class="carousel-inner"> 
-                <!-- Las tarjetas se insertarán aquí mediante JavaScript -->
-                <div class="imagen-container">
-                    <img class="card-img" id="subirfoto" src="placeholder.jpg" alt="Vista previa de la imagen">
-                    <!-- Otras imágenes pueden ser insertadas aquí -->
-                </div>
-            </div>
-            <button id="captureBtn" onclick="window.location.href='camara.html'">➕ Nueva Foto</button>
-        </section>
+      <section id="photo-reel" class="carousel">
+        <div class="carousel-inner">
+          <div class="imagen-container">
+            <img
+              class="card-img"
+              id="subirfoto"
+              src="placeholder.jpg"
+              alt="Vista previa de la imagen"
+            />
+          </div>
+        </div>
+        <button id="captureBtn" onclick="window.location.href='camara.html'">
+          ➕ Nueva Foto
+        </button>
+      </section>
+
+      
     </main>
 
     <footer>
-        <img src="./img/instagram.png" alt="logo" class="card-logo"> <!-- Ruta corregida -->
+      <div class="footer-container">
+        <div class="footer-text">
+          <p>&copy; 2024 Instagram Pets and Pals. All Rights Reserved.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
     </footer>
 
-    <script src="./js/script.js" defer></script> <!-- Ruta correcta -->
-</body>
+    <script src="./js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
 </html>
