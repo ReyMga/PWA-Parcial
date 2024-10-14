@@ -13,8 +13,13 @@ body {
 }
 
 header {
-  background-color: #e1306c; /* Color de fondo de Instagram */
-  color: white;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );  color: white;
   text-align: center;
   padding: 1rem 0;
 }
@@ -84,15 +89,49 @@ button:hover {
   background-color: #c13584; 
 }
 
+
 footer {
-  background-color: #e1306c;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );  color: white;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   position: relative;
   bottom: 0;
   width: 100%;
 }
 
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-text p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 .card-logo {
   width: 50px; /* Ajusta el tamaño del logo */
 }
+
