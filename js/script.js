@@ -8,8 +8,8 @@ const asegurarLength = (title) => {
 };
 
 async function cargarImagenes() {
-  const loader = document.querySelector('.loader'); // Selecciona el loader
-  loader.style.display = 'block'; // Muestra el loader
+  const loader = document.querySelector('.loader'); 
+  loader.style.display = 'block'; 
 
   try {
     const response = await fetch("https://67070a84a0e04071d228f87b.mockapi.io/todo");
@@ -19,9 +19,8 @@ async function cargarImagenes() {
 
     const reel = document.getElementById("photo-reel");
     const carouselInner = reel.querySelector(".carousel-inner");
-    carouselInner.innerHTML = ""; // Limpiar contenido anterior
+    carouselInner.innerHTML = ""; 
 
-    // Oculta el loader después de cargar las imágenes
     loader.style.display = 'none';
 
     imagenes.forEach((imagen) => {
@@ -41,7 +40,6 @@ async function cargarImagenes() {
     });
   } catch (error) {
     console.error("Error al cargar las imágenes:", error);
-    // También oculta el loader si ocurre un error
     loader.style.display = 'none';
   }
 }
