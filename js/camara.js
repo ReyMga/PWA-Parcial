@@ -1,5 +1,5 @@
 const archivoEntrada = document.getElementById('archivo-subido');
-const previsualizacion = document.querySelector('.imagen-previa'); // Usamos la clase .imagen-previa
+const previsualizacion = document.querySelector('.imagen-previa'); 
 const botonPublicar = document.getElementById('boton-publicar');
 const tituloImagen = document.getElementById('titulo-imagen');
 
@@ -13,7 +13,6 @@ const redimensionarImagen = (imgBase64, maxWidth = 600, maxHeight = 600) => {
             let width = img.width;
             let height = img.height;
 
-            // Redimensionar manteniendo la proporción
             if (width > height) {
                 if (width > maxWidth) {
                     height *= maxWidth / width;
@@ -32,24 +31,21 @@ const redimensionarImagen = (imgBase64, maxWidth = 600, maxHeight = 600) => {
             const ctx = canvas.getContext('2d');
             ctx.drawImage(img, 0, 0, width, height);
 
-            // Se convierte de nuevo a base64 con menor calidad
-            resolve(canvas.toDataURL('image/jpeg', 0.6)); // Calidad 60%
+            resolve(canvas.toDataURL('image/jpeg', 0.6)); 
         };
     });
 };
 
-// Creo función para previsualizar la imagen seleccionada
 const previsualizarImagen = (archivo) => {
     if (archivo) {
         const lectorArchivo = new FileReader();
         lectorArchivo.onload = (evento) => {
-            previsualizacion.src = evento.target.result; // Uso de la clase .imagen-previa para la previsualización
+            previsualizacion.src = evento.target.result; 
         };
         lectorArchivo.readAsDataURL(archivo);
     }
 };
 
-// Creo función para validar los campos del formulario
 const validarCampos = () => {
     if (!tituloImagen.value.trim() || !previsualizacion.src) {
         Swal.fire({
@@ -98,7 +94,7 @@ const enviarImagen = async () => {
                 title: '¡Éxito!',
                 text: 'Imagen publicada con éxito.',
             }).then(() => {
-                window.location.href = 'index.html'; // Redirige después de cerrar el SweetAlert
+                window.location.href = 'index.html'; 
             });
         } else {
             const errorTexto = await respuesta.text();
@@ -134,7 +130,7 @@ const updateOnlineStatus = () => {
     }
 };
 
-// Detecta cambios en el estado de conectividad
+// Acá se detectan los cambios en el estado de conectividad
 window.addEventListener('online', updateOnlineStatus);
 window.addEventListener('offline', updateOnlineStatus);
 
