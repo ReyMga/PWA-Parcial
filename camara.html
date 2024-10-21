@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title >InstagramP&P</title>
-    <link rel="stylesheet" href="./Styles/camara.css" />
-    <link rel="icon" href="./img/instagram.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRmG8Bzl1M5cRaIrJXzQzRs9CdM9/pFmz5FsZh1lB" crossorigin="anonymous">
-    <title>Capturar Foto</title>
-  </head>
-  <body>
-    <header>
-      <h1 onclick="window.location.href='index.html'" class="clickable">Instagram Pets and Pals</h1>
-    </header>
-    <main class="container">
-      <img
-        id="subirfoto"
-        class="imagen-previa"
-        src="./img/subirfoto.jpg"
-        alt="Vista previa de la imagen"
-      />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InstagramP&P</title>
+  <link rel="icon" href="./img/instagram.png" type="image/x-icon" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="./Styles/camara.css" />
+</head>
+<body>
+  <header>
+    <h1 onclick="window.location.href='index.html'" class="clickable">
+      Instagram Pets and Pals
+    </h1>
+  </header>
+  <main class="container">
+    <img
+      id="subirfoto"
+      class="imagen-previa"
+      src="./img/subirfoto.jpg"
+      alt="Vista previa de la imagen"
+    />
 
-      <input
-        type="file"
-        id="archivo-subido"
-        accept="image/*"
-        capture="camera"
-      />
+    <input
+      type="file"
+      id="archivo-subido"
+      accept="image/*"
+      capture="camera"
+    />
 
-      <input
-        type="text"
-        id="titulo-imagen"
-        placeholder="Título para la imagen"
-        maxlength="20"
-      />
+    <input
+      type="text"
+      id="titulo-imagen"
+      placeholder="Título para la imagen"
+      maxlength="20"
+    />
 
-      <!-- Botones de cancelar y publicar -->
-      <div>
-        <button onclick="window.location.href='index.html'">Cancelar</button>
-        <button id="boton-publicar">Publicar</button>
-      </div>
-    </main>
+    <!-- Botones de cancelar y publicar -->
+    <div>
+      <button class="btn btn-secondary" onclick="window.location.href='index.html'">Cancelar</button>
+      <button class="btn btn-primary" id="boton-publicar">Publicar</button>
+    </div>
+  </main>
 
-    <script src="./js/camara.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  </body>
+  <script src="./js/camara.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
 </html>
