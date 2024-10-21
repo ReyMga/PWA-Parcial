@@ -13,9 +13,9 @@ async function cargarImagenes() {
 
   try {
     const response = await fetch("https://67070a84a0e04071d228f87b.mockapi.io/todo");
-    const imagenes = await response.json();
-
-    console.log(imagenes);
+    let imagenes = await response.json();
+    
+    imagenes.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 
     const reel = document.getElementById("photo-reel");
     const carouselInner = reel.querySelector(".carousel-inner");
@@ -43,6 +43,7 @@ async function cargarImagenes() {
     loader.style.display = 'none';
   }
 }
+
 
 
 async function eliminarImagen(id) {
